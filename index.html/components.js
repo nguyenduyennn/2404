@@ -14,3 +14,5 @@ fetch("components.html")
             temp.querySelector("#footer-content").innerHTML;
 
     });
+
+   
