@@ -480,7 +480,7 @@ footer {
     }
     .hero h1 {
 
-        font-size: 48px;
+        font-size: 30px;
         margin-bottom: 20px;
         font-weight: 600;
 
@@ -513,11 +513,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    .products {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
     .product img {
         height: 260px;
     }
@@ -534,7 +529,7 @@ footer {
         padding: 25px 18px;
     }
     .hero-product img { 
-        max-width: 300px;
+        max-width: 180px;
     }
 }
 /*Sản phẩm giới thiệu  */ 
@@ -876,45 +871,49 @@ footer {
 }
 @keyframes bottleGlow{
     from{
-        opacity: 30; 
+        opacity: .30; 
         transform: scale(.92);
     }
     to{
-        opacity: 60; 
+        opacity: .60; 
         transform:scale(1.05);
     }
 }
 
-/*màn hình*/
-@media (max-width: 768px) {
-    .featured-products {
-        padding: 45px 12px;
-    }
+/* ===== SẢN PHẨM TRÊN ĐIỆN THOẠI ===== */
 
-    .section-title h2 {
-        font-size: 26px;
-    }
-
-    .section-title p {
-        font-size: 14px;
-    }
+@media (max-width: 600px) {
 
     .product-card {
-        width: 92%;
-        max-width: 400px;
+        width: 94%;
         margin: 0 auto 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-sizing: border-box;
     }
 
     .product-image {
+        width: 100%;
         height: 220px;
     }
 
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
     .product-info {
+        width: 100%;
         padding: 18px;
+        box-sizing: border-box;
     }
 
     .product-info h3 {
         font-size: 19px;
+        margin-top: 0;
     }
 
     .product-price {
@@ -927,7 +926,14 @@ footer {
     }
 
     .order-btn {
-        padding: 11px 18px;
+        width: 100%;
+        padding: 11px;
     }
 }
+.section-title h2 {
+    font-size: 28px;
+}
 
+.section-title p {
+    font-size: 14px;
+}
