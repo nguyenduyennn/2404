@@ -884,3 +884,50 @@ footer {
         transform:scale(1.05);
     }
 }
+
+/*màn hình*/
+@media (max-width: 768px) {
+    .featured-products {
+        padding: 45px 12px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .product-card {
+        width: 92%;
+        max-width: 400px;
+        margin: 0 auto 25px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 18px;
+    }
+
+    .product-info h3 {
+        font-size: 19px;
+    }
+
+    .product-price {
+        font-size: 17px;
+    }
+
+    .product-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .order-btn {
+        padding: 11px 18px;
+    }
+}
+
