@@ -82,7 +82,7 @@ nav a:hover {
     background:
         linear-gradient(rgba(223, 233, 216, 0.40),
                         rgba(223, 233, 216, 0.40)),
-        url("img/banner1.jpg") center / cover no-repeat;
+        url("img/Banner1.jpg") center / cover no-repeat;
 }
 .hero-product {
    height:100%; 
@@ -102,7 +102,7 @@ nav a:hover {
     filter: blur(80px);
     opacity: .45;
 
-    animation: bottleGlow 3s ease-in-out infinte alternate; 
+    animation: bottleGlow 3s ease-in-out infinite alternate; 
 }
 
 /* Chai */
@@ -930,10 +930,446 @@ footer {
         padding: 11px;
     }
 }
-.section-title h2 {
-    font-size: 28px;
+/* ===== GREEN CYCLE ===== */
+
+.cycle-section {
+    position: relative;
+    min-height: 700px;
+    padding: 90px 8%;
+    overflow: hidden;
+    background: #eef5ed;
+    text-align: center;
 }
 
-.section-title p {
-    font-size: 14px;
+.cycle-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(201, 226, 205, .65),
+        transparent 68%
+    );
+    pointer-events: none;
 }
+
+.cycle-head {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+    margin: auto;
+}
+
+.cycle-head span {
+    color: #5d896a;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.cycle-head h2 {
+    margin: 14px 0;
+    color: #173c2b;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.cycle-head h2 em {
+    color: #4b8060;
+    font-style: normal;
+}
+
+.cycle-head p {
+    color: #68776e;
+    font-size: 15px;
+}
+
+/* VÒNG TRUNG TÂM */
+
+.cycle {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    margin: 55px auto 35px;
+}
+
+.cycle-ring {
+    position: absolute;
+    inset: 35px;
+    border: 1px solid rgba(65,112,78,.25);
+    border-radius: 50%;
+    animation: cycleRotate 18s linear infinite;
+}
+
+.cycle-ring::before,
+.cycle-ring::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(65,112,78,.13);
+}
+
+.cycle-ring::before {
+    inset: 38px;
+}
+
+.cycle-ring::after {
+    inset: 75px;
+}
+
+/* ĐIỂM SÁNG */
+
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5d9470;
+    box-shadow: 0 0 18px rgba(71,125,92,.8);
+}
+
+.dot-1 {
+    top: -4px;
+    left: 50%;
+}
+
+.dot-2 {
+    right: 10px;
+    bottom: 75px;
+}
+
+.dot-3 {
+    left: 10px;
+    bottom: 75px;
+}
+
+/* TRUNG TÂM */
+
+.cycle-center {
+    position: absolute;
+    inset: 130px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.75);
+    box-shadow:
+        0 15px 45px rgba(45,85,55,.1),
+        inset 0 0 30px rgba(220,238,220,.8);
+    backdrop-filter: blur(5px);
+}
+
+.cycle-center strong {
+    font-size: 38px;
+    color: #4b8060;
+    font-weight: normal;
+    animation: centerPulse 3s ease-in-out infinite;
+}
+
+.cycle-center small {
+    margin-top: 4px;
+    color: #71917b;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.cycle-center b {
+    color: #315d43;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* 4 MỐC */
+
+.cycle-point {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #315d43;
+}
+
+.cycle-point span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #315d43;
+    color: white;
+    font-size: 10px;
+    box-shadow: 0 5px 15px rgba(49,93,67,.2);
+}
+
+.cycle-point b {
+    font-size: 13px;
+    white-space: nowrap;
+}
+.point-1 {
+    top: 35px;
+    left: -5px;
+}
+
+.point-2 {
+    top: 35px;
+    right: -5px;
+}
+
+.point-3 {
+    bottom: 35px;
+    right: -5px;
+}
+
+.point-4 {
+    bottom: 35px;
+    left: -5px;
+}
+
+/* NÚT */
+
+.cycle-link {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1px solid #9dbba5;
+    border-radius: 30px;
+    color: #315d43;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .35s;
+}
+
+.cycle-link span {
+    font-size: 18px;
+    transition: .35s;
+}
+
+.cycle-link:hover {
+    background: #315d43;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.cycle-link:hover span {
+    transform: translate(3px,-3px);
+}
+
+/* CHUYỂN ĐỘNG */
+
+@keyframes cycleRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes centerPulse {
+    0%,100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+/* ĐIỆN THOẠI */
+
+@media (max-width: 600px) {
+
+    .cycle-section {
+        min-height: 620px;
+        padding: 65px 6%;
+    }
+
+    .cycle-head h2 {
+        font-size: 29px;
+    }
+
+    .cycle-head p {
+        font-size: 14px;
+    }
+
+    .cycle {
+        width: 300px;
+        height: 300px;
+        margin-top: 40px;
+    }
+
+    .cycle-ring {
+        inset: 25px;
+    }
+
+    .cycle-center {
+        inset: 90px;
+    }
+
+    .cycle-center strong {
+        font-size: 30px;
+    }
+
+    .cycle-point span {
+        width: 28px;
+        height: 28px;
+        font-size: 9px;
+        background: #d9c27c;
+    }
+
+    .cycle-point b {
+        font-size: 11px;
+    }
+
+    .point-1 {
+        left: -10px;
+        top: 25px;
+    }
+
+    .point-2 {
+        right: -10px;
+        top: 25px;
+    }
+
+    .point-3 {
+        right: -10px;
+        bottom: 25px;
+    }
+
+    .point-4 {
+        left: -10px;
+        bottom: 25px;
+    }
+}
+/* ===== NỀN ÁNH ĐÈN + THỦY TINH ===== */
+
+.cycle-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(246, 211, 137, .18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(111, 160, 125, .16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(111, 160, 125, .12),
+            transparent 30%
+        ),
+        #eef5ed;
+
+
+}
+
+.cycle-section::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(71, 125, 92, .10);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 70px rgba(71, 125, 92, .045),
+        0 0 0 145px rgba(71, 125, 92, .025);
+
+    animation: glassRing 18s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+    margin-top:var(--scroll-move, 0px); 
+}
+
+.cycle-section::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background: rgba(246, 211, 137, .16);
+    filter: blur(35px);
+
+    animation: lampGlow 5s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+
+    margin-top:calc(var(--scroll-move, 0px) * -0.6); 
+}
+
+.cycle-head,
+.cycle,
+.cycle-link {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes glassRing {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes lampGlow {
+    0%, 100% {
+        opacity: .5;
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.12);
+    }
+}
+
+.cycle-head h2{ 
+    color: #f4f1e8; 
+}
+.cycle-head h2 em{ 
+    color: #070a07; 
+}
+.cycle-head p{ 
+    color: #c5d2c8; 
+}
+.cycle-head span{
+    color: #b8d3db; 
+}
+.cycle-point { 
+    color: #eef5ed; 
+}
+.cycle-link{ 
+    color: #eef5ed;
+    border-color: rgba(238,245,237, .45);
+}
+.cycle-link:hover{ 
+    background: #d9c27c;
+    color: #173c2b;
+}
+

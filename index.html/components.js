@@ -14,5 +14,17 @@ fetch("components.html")
             temp.querySelector("#footer-content").innerHTML;
 
     });
+const cycleSection = document.querySelector(".cycle-section");
 
+window.addEventListener("scroll", () => {
+    if (!cycleSection) return;
+
+    const rect = cycleSection.getBoundingClientRect();
+    const move = (window.innerHeight - rect.top) * 0.03;
+
+    cycleSection.style.setProperty(
+        "--scroll-move",
+        `${Math.max(-15, Math.min(15, move))}px`
+    );
+});
    
